@@ -1,6 +1,10 @@
 <script setup>
 import { Button } from '@/components/ui/button';
 import { useCounterStore } from '@/stores/couter';
+
+import { RouterLink } from 'vue-router';
+import { Badge } from '@/components/ui/badge';
+
 const store = useCounterStore();
 </script>
 
@@ -15,15 +19,18 @@ const store = useCounterStore();
             <p class="text-2xl font-semibold">Counter: {{ store.count }}</p>
             <p class="text-lg text-gray-400">Double: {{ store.dubbleCount }}</p>
             <div class="mt-4 flex space-x-4">
-                <Button @click="store.decrement"
-                    class=" bg-gradient-to-r from-red-600 to-pink-600 text-white hover:from-red-700 hover:to-pink-700 transition-all">
+                <Button @click="store.decrement" class="  text-white hover:from-gray-800 hover:to-black transition-all">
                     Decrement
                 </Button>
-                <Button @click="store.increment"
-                    class=" bg-gradient-to-r from-green-600 to-teal-600 text-white hover:from-green-700 hover:to-teal-700 transition-all">
+                <Button @click="store.increment" class=" text-white hover:from-gray-800 hover:to-black transition-all">
                     Increment
                 </Button>
             </div>
+        </div>
+        <div class="mt-5">
+            <RouterLink to="/about">
+                <Badge class="bg-blue-500">About</Badge>
+            </RouterLink>
         </div>
     </div>
 </template>
