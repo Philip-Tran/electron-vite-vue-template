@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+console.log("This is how you say it")
+</script>
 
 <template>
     <div>

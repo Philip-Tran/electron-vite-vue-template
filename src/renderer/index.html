@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <title>Joy Read App</title>
+    
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- Set allow origin here for connect to external API -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://jsonplaceholder.typicode.com *.philtranwp.site philtranwp.site"
     />
+
     <link href="/dist/styles.css" rel="stylesheet">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';img-src \* 'self' data: https:;connect-src \* 'self';" />
   </head>
 
   <body>

@@ -19,14 +19,12 @@ export default defineConfig({
       alias: {
         '@renderer': resolve('src/renderer/src'),
         '@': fileURLToPath(new URL('./src/renderer/src', import.meta.url))
-        // '@': resolve('/src/renderer/src')
       }
     },
     plugins: [vue(), vueDevTools()],
     server: {
       port: 3000,
       headers: {
-        "Content-Security-Policy": "*",
       }
     }
   }
