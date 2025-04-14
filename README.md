@@ -1,4 +1,4 @@
-# joyread-desktop
+# Vue Electron
 
 An Electron application with Vue and TypeScript
 
